@@ -1,7 +1,7 @@
 // IRemoteService.aidl
-package com.race604.servicelib;
+package com.senior.servicelib;
 
-import com.race604.servicelib.IParticipateCallback;
+import com.senior.servicelib.IParticipateCallback;
 
 interface IRemoteService {
     int someOperate(int a, int b);

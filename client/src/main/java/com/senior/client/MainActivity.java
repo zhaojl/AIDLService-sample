@@ -1,4 +1,4 @@
-package com.race604.client;
+package com.senior.client;
 
 import android.content.ComponentName;
 import android.content.Intent;
@@ -14,8 +14,9 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.race604.servicelib.IParticipateCallback;
-import com.race604.servicelib.IRemoteService;
+import com.senior.client.R;
+import com.senior.servicelib.IParticipateCallback;
+import com.senior.servicelib.IRemoteService;
 
 import java.util.List;
 import java.util.Random;
@@ -125,8 +126,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.bind:
                 Intent intent = new Intent(IRemoteService.class.getName());
-                intent.setClassName("com.race604.remoteservice", "com.race604.remoteservice.RemoteService");
-                //intent.setPackage("com.race604.remoteservice");
+                intent.setClassName("com.senior.remoteservice", "com.senior.remoteservice.RemoteService");
+                //intent.setPackage("com.senior.remoteservice");
                 bindService(intent, mServiceConnection, BIND_AUTO_CREATE);
                 mIsBound = true;
                 break;
