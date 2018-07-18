@@ -1,5 +1,26 @@
 apply plugin: 'com.android.application'
 
+/** 结合 git 和 gradle 实现自动版本号和自动版本名字 */
+def gitVersionCode() {
+    def cmd = 'git rev-list HEAD --first-parent --count'
+    cmd.execute().text.trim().toInteger()
+}
+
+def gitVersionTag() {
+    def cmd = 'git describe --tags'
+    def version = cmd.execute().text.trim()
+
+    def pattern = "-(\\d+)-g"
+    def matcher = version =~ pattern
+
+    if (matcher) {
+        version = version.substring(0, matcher.start()) + "." + matcher[0][1]
+    } else {
+        version = version + ".0"
+    }
+    return version
+}
+
 android {
     compileSdkVersion 25
     buildToolsVersion '25.0.0'
@@ -7,6 +28,7 @@ android {
     defaultConfig {
         applicationId "com.senior.client"
         minSdkVersion 11
+
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -15,6 +37,12 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    applicationVariants.all { variant ->
+        if (variant.buildType.name.equals('release')) {
+            variant.mergedFlavor.versionCode = gitVersionCode()
+            variant.mergedFlavor.versionName = gitVersionTag()
         }
     }
 }
