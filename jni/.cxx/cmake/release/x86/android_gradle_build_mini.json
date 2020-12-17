@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "/Users/zhaojianling/Library/Android/sdk/ndk/21.0.6113669/build/cmake/android.toolchain.cmake",
+    "/Users/zhaojianling/Library/Android/sdk/ndk/21.0.6113669/build/cmake/platforms.cmake",
+    "/Users/zhaojianling/github_zhaojl/AndroidApp/jni/CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "/Users/zhaojianling/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/zhaojianling/github_zhaojl/AndroidApp/jni/.cxx/cmake/release/x86\" clean"
+  ],
+  "buildTargetsCommand": "/Users/zhaojianling/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/Users/zhaojianling/github_zhaojl/AndroidApp/jni/.cxx/cmake/release/x86\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "JNIHello-Release-x86": {
+      "artifactName": "JNIHello",
+      "buildCommand": "/Users/zhaojianling/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/zhaojianling/github_zhaojl/AndroidApp/jni/.cxx/cmake/release/x86\" JNIHello",
+      "abi": "x86",
+      "output": "/Users/zhaojianling/github_zhaojl/AndroidApp/jni/build/intermediates/cmake/release/obj/x86/libJNIHello.so",
+      "runtimeFiles": []
+    }
+  }
+}

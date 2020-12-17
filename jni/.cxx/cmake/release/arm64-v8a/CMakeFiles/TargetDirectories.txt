@@ -1,0 +1,3 @@
+/Users/zhaojianling/github_zhaojl/AndroidApp/jni/.cxx/cmake/release/arm64-v8a/CMakeFiles/rebuild_cache.dir
+/Users/zhaojianling/github_zhaojl/AndroidApp/jni/.cxx/cmake/release/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/zhaojianling/github_zhaojl/AndroidApp/jni/.cxx/cmake/release/arm64-v8a/CMakeFiles/JNIHello.dir
