@@ -39,7 +39,21 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+
+        applicationVariants.all { variant ->
+            variant.outputs.each { output ->
+                def apk = output.outputFile
+                if (apk != null && apk.name.endsWith('.apk')) {
+                    def fileName = "cmfchina_v${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
+                    output.outputFile = new File(apk.parent + "/package", fileName)
+                }
+            }
+        }
     }
+}
+
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd_hh-mm-ss", TimeZone.getTimeZone("GMT+08:00"))
 }
 
 dependencies {
