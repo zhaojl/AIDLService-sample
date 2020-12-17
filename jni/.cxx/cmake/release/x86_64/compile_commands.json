@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/Users/zhaojianling/github_zhaojl/AndroidApp/jni/.cxx/cmake/release/x86_64",
-  "command": "/Users/zhaojianling/Library/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=x86_64-none-linux-android21 --gcc-toolchain=/Users/zhaojianling/Library/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/zhaojianling/Library/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -DJNIHello_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC   -o CMakeFiles/JNIHello.dir/src/main/jni/JNIHello.cpp.o -c /Users/zhaojianling/github_zhaojl/AndroidApp/jni/src/main/jni/JNIHello.cpp",
-  "file": "/Users/zhaojianling/github_zhaojl/AndroidApp/jni/src/main/jni/JNIHello.cpp"
-}
-]

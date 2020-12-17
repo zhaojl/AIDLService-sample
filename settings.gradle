@@ -1,1 +1,1 @@
-include ':client', ':service', ':servicelib', ':jni'
+include ':client', ':service', ':servicelib'
